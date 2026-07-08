@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-sky-100 via-sky-50 to-white text-brand-950 font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Core glass surface used across cards, nav, sheets */
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/70 shadow-glass;
+  }
+
+  .glass-strong {
+    @apply bg-white/85 backdrop-blur-xl border border-white/80 shadow-glass-lg;
+  }
+
+  .app-shell {
+    @apply mx-auto w-full max-w-md min-h-screen relative pb-28;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-900 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-800 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-white/80 border border-brand-100 px-5 py-3 text-sm font-semibold text-brand-900 shadow-card transition hover:bg-white active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-50;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-brand-100 bg-white/80 px-4 py-3 text-sm text-brand-950 placeholder:text-brand-400/70 shadow-sm outline-none transition focus:border-brand-400 focus:ring-4 focus:ring-brand-100;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand-700/80;
+  }
+
+  .card {
+    @apply rounded-3xl bg-white shadow-card border border-brand-50;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold;
+  }
+
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-[11px] font-medium text-brand-400 transition;
+  }
+
+  .bottom-nav-item.active {
+    @apply text-brand-900;
+  }
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
