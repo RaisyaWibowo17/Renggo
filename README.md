@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Renggo — Ruang Digital UMKM Desa
 
 Katalog digital UMKM desa berbasis **Laravel 12 + Blade + Tailwind CSS**, dengan penyimpanan file di **Supabase Storage** dan database **PostgreSQL (Supabase)**.
@@ -138,3 +139,6 @@ routes/web.php             → seluruh route aplikasi
 - Review dibatasi 1 per pelanggan per UMKM lewat unique constraint database (`umkm_id`, `user_id`) + pengecekan di controller.
 - Statistik "jumlah kunjungan halaman" dicatat otomatis oleh middleware `LogActivity` setiap kali halaman detail UMKM dibuka.
 - Warna & komponen glassmorphism (biru terang, rounded corners besar, soft shadow) didefinisikan sebagai utility class di `resources/css/app.css` (`.glass`, `.glass-strong`, `.card`, `.btn-primary`, dll.) supaya konsisten di semua halaman.
+=======
+# Renggo
+>>>>>>> 4767605c3ce316d4e0220ef7bf126e1e2ad0c176
