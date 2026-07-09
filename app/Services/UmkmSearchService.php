@@ -48,6 +48,6 @@ class UmkmSearchService
 
     public function categories(): Collection
     {
-        return Category::orderBy('name')->get();
+        return Category::allOrSeedDefaults();
     }
 }

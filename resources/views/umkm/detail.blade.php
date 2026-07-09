@@ -1,7 +1,7 @@
 <x-layouts.app :title="$umkm->name">
     <div class="-mx-4 -mt-5">
         {{-- Cover Banner --}}
-        <div class="relative h-56 w-full bg-gradient-to-br from-brand-200 to-brand-400">
+        <div class="relative h-48 w-full overflow-hidden rounded-b-[32px] bg gradient-to-b from-brand-200 to-brand-400">
             @if ($umkm->cover_path)
                 <img src="{{ $umkm->cover_path }}" alt="{{ $umkm->name }}" class="h-full w-full object-cover">
             @endif
@@ -30,9 +30,9 @@
         </div>
     </div>
 
-    <div class="-mt-6 space-y-5">
+    <div class="-mt-4 space-y-5">
         {{-- Info card --}}
-        <div class="card p-4">
+        <div class="relative z-20 -mt-10 space-y-5 px-4">
             <div class="flex items-start justify-between gap-2">
                 <div>
                     <span class="pill bg-brand-50 text-brand-700">{{ $umkm->category->name }}</span>

@@ -27,7 +27,7 @@ class UmkmController extends Controller
 
         return view('owner.umkm.form', [
             'umkm' => null,
-            'categories' => Category::orderBy('name')->get(),
+            'categories' => Category::allOrSeedDefaults(),
         ]);
     }
 
@@ -88,7 +88,7 @@ class UmkmController extends Controller
 
         return view('owner.umkm.form', [
             'umkm' => $umkm,
-            'categories' => Category::orderBy('name')->get(),
+            'categories' => Category::allOrSeedDefaults(),
         ]);
     }
 

@@ -34,7 +34,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M18 11a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 Explore
             </a>
-            <a href="<?php echo e($user ? route('register.owner') : route('register.owner')); ?>" class="-mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-900 text-white shadow-glass-lg transition active:scale-95">
+            <a href="<?php echo e($user ? route('login.owner') : route('register.owner')); ?>" class="-mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-900 text-white shadow-glass-lg transition active:scale-95">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
             </a>
             <a href="<?php echo e($user ? route('favorite.index') : route('login.customer')); ?>" class="bottom-nav-item <?php echo e(request()->routeIs('favorite.*') ? 'active' : ''); ?> w-14">
@@ -47,5 +47,4 @@
             </a>
         <?php endif; ?>
     </div>
-</nav>
-<?php /**PATH C:\xampp\htdocs\renggo\resources\views/components/bottom-nav.blade.php ENDPATH**/ ?>
+</nav><?php /**PATH C:\xampp\htdocs\renggo\resources\views/components/bottom-nav.blade.php ENDPATH**/ ?>
