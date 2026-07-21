@@ -15,8 +15,13 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-# Jangan cache config saat build — biar baca dari env Railway
-# RUN php artisan config:cache  ← hapus baris ini
+# Buat folder storage yang dibutuhkan Laravel
+RUN mkdir -p storage/framework/sessions \
+    storage/framework/views \
+    storage/framework/cache/data \
+    storage/logs \
+    bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
 
 EXPOSE 8000
 
